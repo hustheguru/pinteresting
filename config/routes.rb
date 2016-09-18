@@ -1,5 +1,7 @@
-Rails.application.routes.draw do
-  root 'pages#home'
+ Rails.application.routes.draw do
+  devise_for :users
+  root to: 'pages#home'
+
   get 'about' => 'pages#about' #creates above tab
   get 'faqs' => 'pages#faqs'
   
